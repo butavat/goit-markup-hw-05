@@ -157,7 +157,7 @@ body {
   gap: 40px;
 }
 
-/*=============Contacts=============*/
+/*=============/Contacts=============*/
 
 /*=============HERO SECTION===========*/
 
@@ -218,7 +218,7 @@ body {
   background-color: #404bbf;
 }
 
-/*=============HERO SECTION===========*/
+/*=============/HERO SECTION===========*/
 
 /*===========Features Section==========*/
 
@@ -283,7 +283,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/*===========Features Section==========*/
+/*===========/Features Section==========*/
 
 /*============Our Team===============*/
 
@@ -378,7 +378,7 @@ body {
   line-height: 0;
 }
 
-/*============Our Team===============*/
+/*============/Our Team===============*/
 
 /*=============Our Portfolio============*/
 .portfolio {
@@ -465,7 +465,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/*=============Our Portfolio============*/
+/*=============/Our Portfolio============*/
 
 /*===========FOOTER===============*/
 .footer-section {
@@ -529,7 +529,7 @@ body {
   background-color: #31d0aa;
 }
 
-/*===========FOOTER===============*/
+/*===========/FOOTER===============*/
 
 /*============BACKDROP==========*/
 .backdrop {
@@ -540,8 +540,22 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*============BACKDROP==========*/
+
+.backdrop.is-open {
+  opacity: 01;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/*============/BACKDROP==========*/
 
 /*============MODAL WINDOW==========*/
 .modal {
@@ -554,5 +568,54 @@ body {
   padding: 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
+  stroke: #2e2f42;
 }
-/*============MODAL WINDOW==========*/
+
+.close-btn-icon {
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  fill: #2e2f42;
+}
+
+.close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  fill: #ffffff;
+  background-color: #404bbf;
+  border: none;
+}
+
+/*============/MODAL WINDOW==========*/
+
+/*============MODAL FORM==========*/
+.customers-form-description {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+/*============/MODAL FORM==========*/
