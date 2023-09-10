@@ -477,7 +477,6 @@ body {
 
 .footer-container {
   display: flex;
-  gap: 16px;
   align-items: baseline;
 }
 
@@ -530,10 +529,9 @@ body {
 }
 
 .footer-form-section {
-  display: flex;
+  margin-left: auto;
   flex-direction: column;
-  padding: 8px;
-}
+  }
 
 .footer-form-description {
   color: #ffffff;
@@ -580,7 +578,6 @@ body {
   height: 40px;
   cursor: pointer;
   padding: 8px 24px;
-  margin-left: 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
